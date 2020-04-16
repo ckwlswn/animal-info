@@ -1,0 +1,115 @@
+/* style.css */
+* { margin: 0;
+    padding: 0;
+}
+
+body { 
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+h1 { font-weight: 300;}
+a { 
+    text-decoration: none;
+    color: #fff;
+}
+ul { list-style-type: none;}
+
+/* 헤더 */
+header {
+    background: #6200ee;
+    color: #fff;
+    text-align: center;
+    /* outline: 2px solid red; */
+    box-shadow: 4px 0px 6px #666;
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%;
+    z-index: 999;
+}
+header > h1 {
+    font-size: 28px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+header > nav {
+    /* outline: 1px solid red; */
+    overflow: hidden;
+
+}
+header > nav ul > li {
+    float: left;
+    width: 33.33%;
+    text-transform: capitalize;
+    font-weight: normal;
+}
+header > nav ul > li > a {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    opacity: 0.8;
+    position: relative;
+}
+
+header > nav ul > li > a:hover,
+header > nav ul > li > a:active,
+header > nav ul > li > a.selected {
+    opacity: 1;
+}
+
+
+/* 메뉴 전환 시 하단 보더 효과 */
+header > nav ul > li > a.selected:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    left: 0; bottom: 0;
+}
+
+/* 컨텐츠 . 펫리스트 */
+section {
+    margin-top: 86px;
+    text-align: center;
+    padding: 15px;
+    padding-top: 0px;
+    overflow: hidden;
+}
+section > h1 {
+    border-top: 10px;
+    padding-bottom: 10px;
+}
+#pet_list {
+    /* outline: 2px solid red; */
+    overflow: hidden;
+}
+#pet_list > li {
+    position: relative;
+    width: 49%;
+    overflow: hidden;
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+#pet_list > li:nth-child(2n) {
+    margin-right: 0;
+}
+#pet_list > li > img {
+     width: 100%;
+    display: block;
+}
+
+#pet_list > li > .name {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    background: rgba(0,0,0,0.7);
+    left: 0; bottom: 0;
+    color: #fff;
+    line-height: 60px;
+    font-size: 16px;
+    /* 첫글자만 대문자로 */
+    text-transform: capitalize;   
+    
+}
